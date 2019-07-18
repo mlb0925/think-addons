@@ -20,7 +20,7 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/shophome/think_addonsissues"
+        "issues": "https://github.com/shophome/think_addons/issues"
     },
     "require": {
         "php": ">=5.4.0",
