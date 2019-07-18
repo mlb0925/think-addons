@@ -1,0 +1,43 @@
+{
+    "name": "shophome/think_addons",
+    "description": "addons package for thinkphp5.0.24",
+    "homepage": "https://github.com/shophome/think_addons",
+    "license": "Apache-2.0",
+    "minimum-stability": "dev",
+    "version": "1.1.9",
+    "authors": [
+        {
+            "name": "lanrenchengxu",
+            "email": "service@kuitao8.com"
+        },
+        {
+            "name": "karsonzhang",
+            "email": "karsonzhang@163.com"
+        },
+        {
+            "name": "xiaobo.sun",
+            "email": "xiaobo.sun@qq.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/shophome/think_addonsissues"
+    },
+    "require": {
+        "php": ">=5.4.0",
+        "topthink/think-helper": ">=1.0.4",
+        "topthink/think-installer": ">=1.0.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "think\\": "src/"
+        },
+        "files": [
+            "src/common.php"
+        ]
+    },
+    "extra": {
+        "think-config": {
+            "addons": "src/config.php"
+        }
+    }
+}
