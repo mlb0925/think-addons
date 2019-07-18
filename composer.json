@@ -1,7 +1,7 @@
 {
-    "name": "shophome/think_addons",
+    "name": "shophome/think-addons",
     "description": "addons package for thinkphp5.0.24",
-    "homepage": "https://github.com/shophome/think_addons",
+    "homepage": "https://github.com/shophome/think-addons",
     "license": "Apache-2.0",
     "minimum-stability": "dev",
     "version": "1.1.9",
@@ -20,7 +20,7 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/shophome/think_addons/issues"
+        "issues": "https://github.com/shophome/think-addons/issues"
     },
     "require": {
         "php": ">=5.4.0",
