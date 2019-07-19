@@ -210,6 +210,7 @@ class Service
         $bootstrapArr = [];
         foreach ($addons as $name => $addon) {
             $bootstrapFile = ADDON_PATH . $name . DS . 'bootstrap.js';
+       //     var_dump($bootstrapFile);
             if ($addon['state'] && is_file($bootstrapFile)) {
                 $bootstrapArr[] = file_get_contents($bootstrapFile);
             }

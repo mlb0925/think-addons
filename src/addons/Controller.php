@@ -158,12 +158,7 @@ class Controller extends \think\Controller
         $this->view->assign('user', $this->auth->getUser());
 
         $site = Config::get("site");
-
-        $upload = \app\common\model\Config::upload();
-
-        // 上传信息配置后
-        Hook::listen("upload_config_init", $upload);
-        Config::set('upload', array_merge(Config::get('upload'), $upload));
+        
 
         // 加载当前控制器语言包
         $this->assign('site', $site);

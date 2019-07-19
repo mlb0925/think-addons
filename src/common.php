@@ -150,6 +150,7 @@ function get_addon_list()
 function get_addon_autoload_config($truncate = false)
 {
     // 读取addons的配置
+    $config = [];
     $config = (array)Config::get('addons');
     if ($truncate) {
         // 清空手动配置的钩子
