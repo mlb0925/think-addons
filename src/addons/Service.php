@@ -625,7 +625,8 @@ EOD;
     {
         return [
             'application',
-            'public'
+            'public',
+            'themes',
         ];
     }
 
