@@ -76,7 +76,7 @@ class Service
      */
     public static function unzip($name)
     {
-        $file = RUNTIME_PATH . 'addons' . DS . $name . '.zip';
+        $file = RUNTIME_PATH . 'addons' . DS .date("Ymd").DS. $name . '.zip';
         $dir = ADDON_PATH . $name . DS;
         if (class_exists('ZipArchive')) {
             $zip = new ZipArchive;
@@ -613,7 +613,7 @@ EOD;
      */
     protected static function getServerUrl()
     {
-        return config('fastadmin.api_url');
+        return config('api_url');
     }
 
     /**
