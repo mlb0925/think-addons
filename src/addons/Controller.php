@@ -90,9 +90,10 @@ class Controller extends \think\Controller
         $this->addon = $addon ? call_user_func($filter, $addon) : '';
         $this->controller = $controller ? call_user_func($filter, $controller) : 'index';
         $this->action = $action ? call_user_func($filter, $action) : 'index';
-
+        $file = ROOT_PATH.'/application/theme/config.php';
+        $res = include_once ($file);
         // 重置配置
-        Config::set('template.view_path', ADDON_PATH . $this->addon . DS . 'view' . DS);
+        Config::set('template.view_path', ROOT_PATH.$res['addon_theme'] . $this->addon  . DS);
 
         // 父类的调用必须放在设置模板路径之后
         parent::__construct($this->request);
@@ -101,6 +102,7 @@ class Controller extends \think\Controller
     protected function _initialize()
     {
         // 渲染配置到视图中
+
         $config = get_addon_config($this->addon);
         $this->view->assign("config", $config);
 
@@ -158,7 +160,7 @@ class Controller extends \think\Controller
         $this->view->assign('user', $this->auth->getUser());
 
         $site = Config::get("site");
-        
+
 
         // 加载当前控制器语言包
         $this->assign('site', $site);
